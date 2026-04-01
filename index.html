@@ -6,7 +6,7 @@
     <title>Sergey M. | Профессиональная разработка лендингов</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -34,11 +34,15 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .logo {
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         /* Custom Scrollbar */
@@ -96,7 +100,7 @@
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 800;
+            font-weight: 700;
             background: var(--gradient-orange);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -202,7 +206,7 @@
 
         .hero h1 {
             font-size: clamp(2.5rem, 6vw, 5rem);
-            font-weight: 800;
+            font-weight: 700;
             line-height: 1.1;
             margin-bottom: 25px;
             animation: fadeInUp 0.8s ease 0.2s both;
@@ -288,7 +292,7 @@
 
         .stat-number {
             font-size: 3rem;
-            font-weight: 800;
+            font-weight: 700;
             background: var(--gradient-orange);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -329,7 +333,7 @@
 
         .section-title {
             font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
@@ -409,7 +413,7 @@
 
         .pricing-price {
             font-size: 3.5rem;
-            font-weight: 800;
+            font-weight: 700;
             background: var(--gradient-orange);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -523,86 +527,17 @@
             height: 250px;
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .style-preview-content {
-            width: 80%;
-            height: 70%;
-            border-radius: 12px;
-            position: relative;
-            transition: all 0.5s ease;
+        .style-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        .style-card:hover .style-preview-content {
-            transform: scale(1.05);
-        }
-
-        /* Style Variations */
-        .style-minimal .style-preview-content {
-            background: #ffffff;
-            border: 2px solid #000;
-        }
-
-        .style-modern .style-preview-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
-        }
-
-        .style-dark .style-preview-content {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            border: 1px solid var(--accent-primary);
-        }
-
-        .style-corporate .style-preview-content {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        }
-
-        .style-creative .style-preview-content {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .style-ecommerce .style-preview-content {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-        }
-
-        /* Animation Elements in Preview */
-        .anim-element {
-            position: absolute;
-            background: var(--accent-primary);
-            border-radius: 8px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .anim-element-1 {
-            width: 40px;
-            height: 40px;
-            top: 20%;
-            left: 20%;
-            animation-delay: 0s;
-        }
-
-        .anim-element-2 {
-            width: 30px;
-            height: 30px;
-            top: 50%;
-            right: 25%;
-            animation-delay: 0.5s;
-        }
-
-        .anim-element-3 {
-            width: 25px;
-            height: 25px;
-            bottom: 25%;
-            left: 30%;
-            animation-delay: 1s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(10deg); }
+        .style-card:hover .style-preview img {
+            transform: scale(1.1);
         }
 
         .style-info {
@@ -659,7 +594,7 @@
 
         .viz-info h3 {
             font-size: 2.5rem;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
@@ -742,8 +677,9 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--accent-primary);
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .cube-front { transform: translateZ(75px); }
@@ -922,10 +858,6 @@
             height: 280px;
             overflow: hidden;
             position: relative;
-            background: linear-gradient(135deg, #1a1a25 0%, #2a2a3a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .portfolio-image img {
@@ -1486,10 +1418,7 @@
             <div class="styles-showcase">
                 <div class="style-card style-minimal fade-in" data-category="business">
                     <div class="style-preview">
-                        <div class="style-preview-content">
-                            <div class="anim-element anim-element-1"></div>
-                            <div class="anim-element anim-element-2"></div>
-                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/1a3b50e5d-8e3f-4a1e-a2bb-4f13af2235ed.png" alt="Минимализм стиль">
                     </div>
                     <div class="style-info">
                         <h3 class="style-name"><span>⚪</span> Минимализм</h3>
@@ -1504,11 +1433,7 @@
 
                 <div class="style-card style-modern fade-in" data-category="creative">
                     <div class="style-preview">
-                        <div class="style-preview-content">
-                            <div class="anim-element anim-element-1"></div>
-                            <div class="anim-element anim-element-2"></div>
-                            <div class="anim-element anim-element-3"></div>
-                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/133f90b95-507e-4135-b01e-7fb381398eb5.png" alt="Современный стиль">
                     </div>
                     <div class="style-info">
                         <h3 class="style-name"><span>🎨</span> Современный</h3>
@@ -1523,10 +1448,7 @@
 
                 <div class="style-card style-dark fade-in" data-category="business">
                     <div class="style-preview">
-                        <div class="style-preview-content">
-                            <div class="anim-element anim-element-1"></div>
-                            <div class="anim-element anim-element-2"></div>
-                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/1f0fc0364-6acf-406d-b7c2-e25aca9e7fde.png" alt="Тёмная тема стиль">
                     </div>
                     <div class="style-info">
                         <h3 class="style-name"><span>🌙</span> Тёмная тема</h3>
@@ -1541,29 +1463,22 @@
 
                 <div class="style-card style-corporate fade-in" data-category="business">
                     <div class="style-preview">
-                        <div class="style-preview-content">
-                            <div class="anim-element anim-element-1"></div>
-                            <div class="anim-element anim-element-2"></div>
-                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/12f6ccec3-1404-4059-9869-6541a2b75b53.png" alt="Корпоративный стиль">
                     </div>
                     <div class="style-info">
                         <h3 class="style-name"><span>🏢</span> Корпоративный</h3>
                         <p class="style-description">Строгий деловой стиль для компаний. Вызывает доверие и подчёркивает профессионализм.</p>
                         <div class="style-features">
-                            <span class="style-feature">Строгость</span>
+                            <span class="style-feature">Профессионализм</span>
                             <span class="style-feature">Доверие</span>
-                            <span class="style-feature">Профи</span>
+                            <span class="style-feature">Бизнес</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="style-card style-creative fade-in" data-category="creative">
                     <div class="style-preview">
-                        <div class="style-preview-content">
-                            <div class="anim-element anim-element-1"></div>
-                            <div class="anim-element anim-element-2"></div>
-                            <div class="anim-element anim-element-3"></div>
-                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/12d9f5622-fd5a-4e63-8ced-516a0dc95c5f.png" alt="Креативный стиль">
                     </div>
                     <div class="style-info">
                         <h3 class="style-name"><span>✨</span> Креативный</h3>
@@ -1578,10 +1493,7 @@
 
                 <div class="style-card style-ecommerce fade-in" data-category="ecommerce">
                     <div class="style-preview">
-                        <div class="style-preview-content">
-                            <div class="anim-element anim-element-1"></div>
-                            <div class="anim-element anim-element-2"></div>
-                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/1e2c1e393-b8b1-4631-b88e-192d0f8621f8.png" alt="E-commerce стиль">
                     </div>
                     <div class="style-info">
                         <h3 class="style-name"><span>🛒</span> E-commerce</h3>
@@ -1794,7 +1706,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card fade-in">
                     <div class="portfolio-image">
-                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/1aed0dd1c-a49f-47ec-9c34-01fdd9a8df37.png" alt="Лендинг для лесозаготовительной компании">
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/1186b0295-884b-478a-ad6f-2ae94cf3882b.png" alt="Лендинг для лесозаготовительной компании">
                         <div class="portfolio-overlay">
                             <a href="https://ruttrf.ru" target="_blank" class="portfolio-link">
                                 <span>Посетить сайт</span>
@@ -1812,7 +1724,7 @@
                 </div>
                 <div class="portfolio-card fade-in">
                     <div class="portfolio-image">
-                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/17e6c8518-6224-48fc-8be4-10bdf590c040.png" alt="Персональное резюме-сайт">
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/169a4216f-9600-422c-9f3f-7df6dfac08c4.png" alt="Персональное резюме-сайт">
                         <div class="portfolio-overlay">
                             <a href="https://xaycnsh.github.io/my-resume/" target="_blank" class="portfolio-link">
                                 <span>Посетить сайт</span>
@@ -1830,7 +1742,7 @@
                 </div>
                 <div class="portfolio-card fade-in">
                     <div class="portfolio-image">
-                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/194a3ec19-c54d-4d8a-a8f4-a133dcde1473.png" alt="Промо-страница товара">
+                        <img src="https://image.qwenlm.ai/public_source/3f00fa0d-9397-478e-8d17-811fef8c60fa/14a39b569-f4b2-48bb-ae80-b3eb4d0d0920.png" alt="Промо-страница товара">
                         <div class="portfolio-overlay">
                             <a href="https://kwork.ru/website-development/50578642/sozdam-prodayushchiy-lending-pod-klyuch" target="_blank" class="portfolio-link">
                                 <span>Посмотреть больше</span>
