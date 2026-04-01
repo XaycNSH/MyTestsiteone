@@ -462,6 +462,440 @@
             justify-content: center;
         }
 
+        /* Design Styles Section */
+        .design-styles-section {
+            background: var(--bg-secondary);
+            overflow: hidden;
+        }
+
+        .styles-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .style-tab {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .style-tab:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+        }
+
+        .style-tab.active {
+            background: var(--gradient-orange);
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+        }
+
+        .styles-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .style-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .style-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .style-preview {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .style-preview-content {
+            width: 80%;
+            height: 70%;
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .style-card:hover .style-preview-content {
+            transform: scale(1.05);
+        }
+
+        /* Style Variations */
+        .style-minimal .style-preview-content {
+            background: #ffffff;
+            border: 2px solid #000;
+        }
+
+        .style-modern .style-preview-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .style-dark .style-preview-content {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid var(--accent-primary);
+        }
+
+        .style-corporate .style-preview-content {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .style-creative .style-preview-content {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .style-ecommerce .style-preview-content {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        /* Animation Elements in Preview */
+        .anim-element {
+            position: absolute;
+            background: var(--accent-primary);
+            border-radius: 8px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .anim-element-1 {
+            width: 40px;
+            height: 40px;
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .anim-element-2 {
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            right: 25%;
+            animation-delay: 0.5s;
+        }
+
+        .anim-element-3 {
+            width: 25px;
+            height: 25px;
+            bottom: 25%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        .style-info {
+            padding: 25px;
+        }
+
+        .style-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .style-name span {
+            font-size: 1.5rem;
+        }
+
+        .style-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .style-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .style-feature {
+            background: rgba(255, 107, 0, 0.1);
+            color: var(--accent-primary);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* 3D Visualization Section */
+        .visualization-3d {
+            padding: 100px 40px;
+            background: var(--bg-primary);
+        }
+
+        .viz-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .viz-info h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .viz-info p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .viz-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .viz-features li {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .viz-features li:last-child {
+            border-bottom: none;
+        }
+
+        .viz-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 107, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-primary);
+        }
+
+        .viz-demo {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-demo-canvas {
+            width: 100%;
+            height: 400px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+
+        .product-3d {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            animation: rotate3D 8s linear infinite;
+        }
+
+        .product-cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid var(--accent-primary);
+            background: rgba(255, 107, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+        }
+
+        .cube-front { transform: translateZ(75px); }
+        .cube-back { transform: rotateY(180deg) translateZ(75px); }
+        .cube-right { transform: rotateY(90deg) translateZ(75px); }
+        .cube-left { transform: rotateY(-90deg) translateZ(75px); }
+        .cube-top { transform: rotateX(90deg) translateZ(75px); }
+        .cube-bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+        @keyframes rotate3D {
+            from { transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg); }
+            to { transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg); }
+        }
+
+        .viz-controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .viz-control-btn {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .viz-control-btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        .viz-control-btn.active {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
+        }
+
+        /* Animation Showcase */
+        .animation-showcase {
+            padding: 100px 40px;
+            background: var(--bg-secondary);
+        }
+
+        .animation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .anim-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .anim-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-5px);
+        }
+
+        .anim-demo {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: rgba(255, 107, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .anim-box {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-orange);
+            border-radius: 10px;
+        }
+
+        .anim-fade .anim-box {
+            animation: animFade 2s ease-in-out infinite;
+        }
+
+        .anim-slide .anim-box {
+            animation: animSlide 2s ease-in-out infinite;
+        }
+
+        .anim-bounce .anim-box {
+            animation: animBounce 2s ease-in-out infinite;
+        }
+
+        .anim-scale .anim-box {
+            animation: animScale 2s ease-in-out infinite;
+        }
+
+        .anim-rotate .anim-box {
+            animation: animRotate 2s ease-in-out infinite;
+        }
+
+        .anim-pulse .anim-box {
+            animation: animPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes animFade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes animSlide {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(40px); }
+        }
+
+        @keyframes animBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @keyframes animScale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+        }
+
+        @keyframes animRotate {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+
+        @keyframes animPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(255, 107, 0, 0); }
+        }
+
+        .anim-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .anim-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
         /* Portfolio Section */
         .portfolio-grid {
             display: grid;
@@ -475,7 +909,6 @@
             border-radius: 24px;
             overflow: hidden;
             transition: all 0.4s ease;
-            group: portfolio;
         }
 
         .portfolio-card:hover {
@@ -870,6 +1303,10 @@
             .hero-stats {
                 gap: 40px;
             }
+
+            .viz-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -918,6 +1355,10 @@
 
             .mouse-follower {
                 display: none;
+            }
+
+            .styles-showcase {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -978,6 +1419,7 @@
             <a href="#" class="logo">Sergey M.</a>
             <ul class="nav-links">
                 <li><a href="#services">Услуги</a></li>
+                <li><a href="#design">Дизайн</a></li>
                 <li><a href="#portfolio">Портфолио</a></li>
                 <li><a href="#tech">Технологии</a></li>
                 <li><a href="#contact">Контакты</a></li>
@@ -1004,8 +1446,8 @@
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#portfolio" class="btn-secondary">
-                    <span>Смотреть работы</span>
+                <a href="#design" class="btn-secondary">
+                    <span>Смотреть стили</span>
                 </a>
             </div>
             <div class="hero-stats">
@@ -1020,6 +1462,266 @@
                 <div class="stat-item">
                     <div class="stat-number">3 дня</div>
                     <div class="stat-label">Средний срок</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Styles Section -->
+    <section class="section design-styles-section" id="design">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Варианты дизайна</span>
+                <h2 class="section-title">Выберите стиль вашего сайта</h2>
+                <p class="section-subtitle">Я работаю в различных стилях — от минимализма до креативных решений с 3D-элементами и сложной анимацией.</p>
+            </div>
+
+            <div class="styles-tabs fade-in">
+                <button class="style-tab active" data-filter="all">Все стили</button>
+                <button class="style-tab" data-filter="business">Бизнес</button>
+                <button class="style-tab" data-filter="creative">Креатив</button>
+                <button class="style-tab" data-filter="ecommerce">E-commerce</button>
+            </div>
+
+            <div class="styles-showcase">
+                <div class="style-card style-minimal fade-in" data-category="business">
+                    <div class="style-preview">
+                        <div class="style-preview-content">
+                            <div class="anim-element anim-element-1"></div>
+                            <div class="anim-element anim-element-2"></div>
+                        </div>
+                    </div>
+                    <div class="style-info">
+                        <h3 class="style-name"><span>⚪</span> Минимализм</h3>
+                        <p class="style-description">Чистый дизайн с акцентом на контент. Идеально для портфолио, блогов и корпоративных сайтов.</p>
+                        <div class="style-features">
+                            <span class="style-feature">Чистота</span>
+                            <span class="style-feature">Простота</span>
+                            <span class="style-feature">Фокус</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-card style-modern fade-in" data-category="creative">
+                    <div class="style-preview">
+                        <div class="style-preview-content">
+                            <div class="anim-element anim-element-1"></div>
+                            <div class="anim-element anim-element-2"></div>
+                            <div class="anim-element anim-element-3"></div>
+                        </div>
+                    </div>
+                    <div class="style-info">
+                        <h3 class="style-name"><span>🎨</span> Современный</h3>
+                        <p class="style-description">Яркие градиенты, смелые цвета и современные UI-решения. Для стартапов и технологических компаний.</p>
+                        <div class="style-features">
+                            <span class="style-feature">Градиенты</span>
+                            <span class="style-feature">Яркость</span>
+                            <span class="style-feature">Инновации</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-card style-dark fade-in" data-category="business">
+                    <div class="style-preview">
+                        <div class="style-preview-content">
+                            <div class="anim-element anim-element-1"></div>
+                            <div class="anim-element anim-element-2"></div>
+                        </div>
+                    </div>
+                    <div class="style-info">
+                        <h3 class="style-name"><span>🌙</span> Тёмная тема</h3>
+                        <p class="style-description">Премиальный вид с тёмным фоном и яркими акцентами. Для гейминга, крипто и luxury-брендов.</p>
+                        <div class="style-features">
+                            <span class="style-feature">Премиум</span>
+                            <span class="style-feature">Акценты</span>
+                            <span class="style-feature">Стиль</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-card style-corporate fade-in" data-category="business">
+                    <div class="style-preview">
+                        <div class="style-preview-content">
+                            <div class="anim-element anim-element-1"></div>
+                            <div class="anim-element anim-element-2"></div>
+                        </div>
+                    </div>
+                    <div class="style-info">
+                        <h3 class="style-name"><span>🏢</span> Корпоративный</h3>
+                        <p class="style-description">Строгий деловой стиль для компаний. Вызывает доверие и подчёркивает профессионализм.</p>
+                        <div class="style-features">
+                            <span class="style-feature">Строгость</span>
+                            <span class="style-feature">Доверие</span>
+                            <span class="style-feature">Профи</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-card style-creative fade-in" data-category="creative">
+                    <div class="style-preview">
+                        <div class="style-preview-content">
+                            <div class="anim-element anim-element-1"></div>
+                            <div class="anim-element anim-element-2"></div>
+                            <div class="anim-element anim-element-3"></div>
+                        </div>
+                    </div>
+                    <div class="style-info">
+                        <h3 class="style-name"><span>✨</span> Креативный</h3>
+                        <p class="style-description">Нестандартные решения, необычная типографика и уникальные визуальные эффекты.</p>
+                        <div class="style-features">
+                            <span class="style-feature">Уникальность</span>
+                            <span class="style-feature">Арт</span>
+                            <span class="style-feature">Эффекты</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="style-card style-ecommerce fade-in" data-category="ecommerce">
+                    <div class="style-preview">
+                        <div class="style-preview-content">
+                            <div class="anim-element anim-element-1"></div>
+                            <div class="anim-element anim-element-2"></div>
+                        </div>
+                    </div>
+                    <div class="style-info">
+                        <h3 class="style-name"><span>🛒</span> E-commerce</h3>
+                        <p class="style-description">Оптимизирован для продаж. Акцент на товарах, удобное оформление заказа.</p>
+                        <div class="style-features">
+                            <span class="style-feature">Продажи</span>
+                            <span class="style-feature">Конверсия</span>
+                            <span class="style-feature">UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animation Showcase Section -->
+    <section class="animation-showcase" id="animations">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Анимация элементов</span>
+                <h2 class="section-title">Живые интерфейсы</h2>
+                <p class="section-subtitle">Анимации делают сайт более привлекательным и улучшают пользовательский опыт.</p>
+            </div>
+            <div class="animation-grid">
+                <div class="anim-card anim-fade fade-in">
+                    <div class="anim-demo">
+                        <div class="anim-box"></div>
+                    </div>
+                    <h4 class="anim-title">Fade (Появление)</h4>
+                    <p class="anim-desc">Плавное появление элементов</p>
+                </div>
+                <div class="anim-card anim-slide fade-in">
+                    <div class="anim-demo">
+                        <div class="anim-box"></div>
+                    </div>
+                    <h4 class="anim-title">Slide (Сдвиг)</h4>
+                    <p class="anim-desc">Движение по горизонтали</p>
+                </div>
+                <div class="anim-card anim-bounce fade-in">
+                    <div class="anim-demo">
+                        <div class="anim-box"></div>
+                    </div>
+                    <h4 class="anim-title">Bounce (Прыжок)</h4>
+                    <p class="anim-desc">Вертикальное движение</p>
+                </div>
+                <div class="anim-card anim-scale fade-in">
+                    <div class="anim-demo">
+                        <div class="anim-box"></div>
+                    </div>
+                    <h4 class="anim-title">Scale (Масштаб)</h4>
+                    <p class="anim-desc">Изменение размера</p>
+                </div>
+                <div class="anim-card anim-rotate fade-in">
+                    <div class="anim-demo">
+                        <div class="anim-box"></div>
+                    </div>
+                    <h4 class="anim-title">Rotate (Вращение)</h4>
+                    <p class="anim-desc">Вращение элементов</p>
+                </div>
+                <div class="anim-card anim-pulse fade-in">
+                    <div class="anim-demo">
+                        <div class="anim-box"></div>
+                    </div>
+                    <h4 class="anim-title">Pulse (Пульс)</h4>
+                    <p class="anim-desc">Эффект пульсации</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Visualization Section -->
+    <section class="visualization-3d" id="visualization">
+        <div class="section-container">
+            <div class="viz-container">
+                <div class="viz-info fade-in">
+                    <span class="section-tag">3D-визуализация</span>
+                    <h3>Продукты в 3D</h3>
+                    <p>Добавлю 3D-модели ваших товаров для максимального вовлечения посетителей. Интерактивная визуализация увеличивает конверсию до 40%.</p>
+                    <ul class="viz-features">
+                        <li>
+                            <div class="viz-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <span>360° вращение продукта</span>
+                        </li>
+                        <li>
+                            <div class="viz-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                                </svg>
+                            </div>
+                            <span>Интерактивное управление</span>
+                        </li>
+                        <li>
+                            <div class="viz-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                </svg>
+                            </div>
+                            <span>Адаптация под мобильные</span>
+                        </li>
+                        <li>
+                            <div class="viz-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <span>Быстрая загрузка</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">
+                        <span>Заказать 3D-визуализацию</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="viz-demo fade-in">
+                    <div class="viz-demo-canvas" id="vizCanvas">
+                        <div class="product-3d">
+                            <div class="product-cube">
+                                <div class="cube-face cube-front">3D</div>
+                                <div class="cube-face cube-back">3D</div>
+                                <div class="cube-face cube-right">3D</div>
+                                <div class="cube-face cube-left">3D</div>
+                                <div class="cube-face cube-top">3D</div>
+                                <div class="cube-face cube-bottom">3D</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viz-controls">
+                        <button class="viz-control-btn active" data-speed="1">Нормально</button>
+                        <button class="viz-control-btn" data-speed="0.5">Медленно</button>
+                        <button class="viz-control-btn" data-speed="2">Быстро</button>
+                        <button class="viz-control-btn" id="toggleRotation">Стоп/Старт</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1343,7 +2045,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2024 Sergey M. Все права защищены.</p>
+                <p class="footer-copyright">© 2026 Sergey M. Все права защищены.</p>
                 <div class="footer-social">
                     <a href="https://t.me/Dontl00katm3" target="_blank" aria-label="Telegram">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1405,7 +2107,7 @@
         animateFollower();
 
         // Hover Effect for Links
-        document.querySelectorAll('a, button, .tech-item, .pricing-card, .portfolio-card').forEach(el => {
+        document.querySelectorAll('a, button, .tech-item, .pricing-card, .portfolio-card, .style-card, .anim-card').forEach(el => {
             el.addEventListener('mouseenter', () => mouseFollower.classList.add('hover'));
             el.addEventListener('mouseleave', () => mouseFollower.classList.remove('hover'));
         });
@@ -1421,6 +2123,66 @@
         }, { threshold: 0.1 });
 
         fadeElements.forEach(el => observer.observe(el));
+
+        // Style Tabs Filter
+        const styleTabs = document.querySelectorAll('.style-tab');
+        const styleCards = document.querySelectorAll('.style-card');
+
+        styleTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                styleTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const filter = tab.dataset.filter;
+                
+                styleCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // 3D Cube Rotation Controls
+        const product3D = document.querySelector('.product-3d');
+        const vizControlBtns = document.querySelectorAll('.viz-control-btn[data-speed]');
+        const toggleRotationBtn = document.getElementById('toggleRotation');
+        let rotationSpeed = 1;
+        let isRotating = true;
+
+        vizControlBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                vizControlBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                rotationSpeed = parseFloat(btn.dataset.speed);
+                updateRotationSpeed();
+            });
+        });
+
+        toggleRotationBtn.addEventListener('click', () => {
+            isRotating = !isRotating;
+            if (isRotating) {
+                product3D.style.animationPlayState = 'running';
+                toggleRotationBtn.classList.remove('active');
+            } else {
+                product3D.style.animationPlayState = 'paused';
+                toggleRotationBtn.classList.add('active');
+            }
+        });
+
+        function updateRotationSpeed() {
+            product3D.style.animationDuration = (8 / rotationSpeed) + 's';
+        }
 
         // Form Submission
         document.getElementById('contactForm').addEventListener('submit', (e) => {
